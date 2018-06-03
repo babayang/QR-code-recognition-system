@@ -23,6 +23,12 @@
         android:layout_gravity="center"
         android:id="@+id/tv1"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击访问扫描网页"
+        android:layout_gravity="center"
+        android:id="@+id/b3"/>
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -40,4 +46,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/img"
         android:layout_gravity="center"/>
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/wb"></WebView>
+
 </LinearLayout>
