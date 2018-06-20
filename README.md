@@ -15,3 +15,9 @@
 ![Image text](https://github.com/babayang/QR-code-recognition-system/raw/master/2.png)
 
 ![Image text](https://github.com/babayang/QR-code-recognition-system/raw/master/2.gif)
+
+打电话
+![Image text](https://github.com/babayang/QR-code-recognition-system/raw/master/call.gif)
+
+发短信
+![Image text](https://github.com/babayang/QR-code-recognition-system/raw/master/massage.gif)
