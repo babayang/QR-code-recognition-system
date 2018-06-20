@@ -61,12 +61,7 @@ final class CameraConfigurationManager {
     Log.d(TAG, "Camera resolution: " + screenResolution);
   }
 
-  /**
-   * Sets the camera up to take preview images which are used for both preview and decoding.
-   * We detect the preview format here so that buildLuminanceSource() can build an appropriate
-   * LuminanceSource subclass. In the future we may want to force YUV420SP as it's the smallest,
-   * and the planar Y can be used for barcode scanning without a copy in some cases.
-   */
+
   void setDesiredCameraParameters(Camera camera) {
     Camera.Parameters parameters = camera.getParameters();
     Log.d(TAG, "Setting preview size: " + cameraResolution);
@@ -181,11 +176,7 @@ final class CameraConfigurationManager {
   }
 
   private void setFlash(Camera.Parameters parameters) {
-    // FIXME: This is a hack to turn the flash off on the Samsung Galaxy.
-    // And this is a hack-hack to work around a different value on the Behold II
-    // Restrict Behold II check to Cupcake, per Samsung's advice
-    //if (Build.MODEL.contains("Behold II") &&
-    //    CameraManager.SDK_INT == Build.VERSION_CODES.CUPCAKE) {
+
     if (Build.MODEL.contains("Behold II") && CameraManager.SDK_INT == 3) { // 3 = Cupcake
       parameters.set("flash-value", 1);
     } else {
@@ -246,14 +237,12 @@ final class CameraConfigurationManager {
       }
     }
 
-    // Set zoom. This helps encourage the user to pull back.
-    // Some devices like the Behold have a zoom parameter
+
     if (maxZoomString != null || motZoomValuesString != null) {
       parameters.set("zoom", String.valueOf(tenDesiredZoom / 10.0));
     }
 
-    // Most devices, like the Hero, appear to expose this zoom parameter.
-    // It takes on values like "27" which appears to mean 2.7x zoom
+
     if (takingPictureZoomMaxString != null) {
       parameters.set("taking-picture-zoom", tenDesiredZoom);
     }

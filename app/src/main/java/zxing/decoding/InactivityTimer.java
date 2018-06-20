@@ -24,9 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
 
-/**
- * Finishes an activity after a period of inactivity.
- */
+
 public final class InactivityTimer {
 
   private static final int INACTIVITY_DELAY_SECONDS = 5 * 60;

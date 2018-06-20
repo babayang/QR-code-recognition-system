@@ -34,7 +34,6 @@ import zxing.view.ViewfinderView;
 
 /**
  * Initial the camera
- * @author Ryan.Tang
  */
 public class CaptureActivity extends Activity implements Callback {
 
@@ -111,11 +110,7 @@ public class CaptureActivity extends Activity implements Callback {
 		super.onDestroy();
 	}
 	
-	/**
-	 * Handler scan result
-	 * @param result
-	 * @param barcode
-	 */
+
 	public void handleDecode(Result result, Bitmap barcode) {
 		inactivityTimer.onActivity();
 		playBeepSoundAndVibrate();
@@ -184,9 +179,7 @@ public class CaptureActivity extends Activity implements Callback {
 
 	private void initBeepSound() {
 		if (playBeep && mediaPlayer == null) {
-			// The volume on STREAM_SYSTEM is not adjustable, and users found it
-			// too loud,
-			// so we now play on the music stream.
+
 			setVolumeControlStream(AudioManager.STREAM_MUSIC);
 			mediaPlayer = new MediaPlayer();
 			mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -218,9 +211,7 @@ public class CaptureActivity extends Activity implements Callback {
 		}
 	}
 
-	/**
-	 * When the beep has finished playing, rewind to queue up another one.
-	 */
+
 	private final OnCompletionListener beepListener = new OnCompletionListener() {
 		public void onCompletion(MediaPlayer mediaPlayer) {
 			mediaPlayer.seekTo(0);

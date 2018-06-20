@@ -30,10 +30,7 @@ import com.google.zxing.ResultPointCallback;
 import zxing.activity.CaptureActivity;
 
 
-/**
- * This thread does all the heavy lifting of decoding the images.
- * �����߳�
- */
+
 final class DecodeThread extends Thread {
 
   public static final String BARCODE_BITMAP = "barcode_bitmap";
@@ -72,7 +69,7 @@ final class DecodeThread extends Thread {
     try {
       handlerInitLatch.await();
     } catch (InterruptedException ie) {
-      // continue?
+
     }
     return handler;
   }
