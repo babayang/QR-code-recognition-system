@@ -14,7 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="扫描二维码"
-        android:textSize="20sp"
         android:id="@+id/b1"
         android:layout_gravity="center"/>
     <TextView
@@ -23,29 +22,48 @@
         android:layout_gravity="center"
         android:id="@+id/tv1"
         />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="点击访问扫描网页"
         android:layout_gravity="center"
         android:id="@+id/b3"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一页打电话"
+            android:id="@+id/bdh"/>
+
+</LinearLayout>
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et1"
         android:hint="请输入要编码的内容"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="生成二维码"
-        android:id="@+id/b2"
-        android:layout_gravity="center"
-        android:textSize="20sp"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/img"
-        android:layout_gravity="center"/>
+        android:id="@+id/bsc"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打电话"
+            android:id="@+id/bddh"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发短信"
+            android:id="@+id/bfdx"/>
+</LinearLayout>
     <WebView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

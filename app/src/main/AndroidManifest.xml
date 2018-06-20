@@ -9,6 +9,9 @@
     <uses-permission android:name="android.permission.CAMERA"/>
 
     <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
 
     <uses-feature android:name="android.hardware.camera.autofocus"/>
     <application
@@ -28,12 +31,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="zxing.activity.CaptureActivity"
+        <activity android:name="com.example.yangdada.qrcode.CaptureActivity"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden">
         </activity>
+        <activity android:name=".Second"
+            android:label="@string/second">
+
+            </activity>
+
+        <activity android:name=".Third"
+            android:label="@string/third"
+
+            ></activity>
 
     </application>
 
